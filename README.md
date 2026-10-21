@@ -2,6 +2,18 @@
 
 Исследовательское Android-приложение на Kotlin **без root** для vivo X300 CN / OriginOS 7. Целевой профиль — **MIFARE Ultralight EV1 MF0UL21**: 41 страница по 4 байта, всего 164 байта.
 
+> **Статус: В РАЗРАБОТКЕ**
+>
+> Проект предназначен для лабораторной проверки собственных NFC-меток и дампов. Это не production-приложение, не официальный клиент vivo Wallet и не готовое решение для эмуляции пропусков. Интерфейс, поддержка форматов и диагностика могут изменяться.
+
+[![Build diagnostic APK](https://github.com/winnifredbalistreri60-prog/VivoNfcLab/actions/workflows/build-apk.yml/badge.svg)](https://github.com/winnifredbalistreri60-prog/VivoNfcLab/actions/workflows/build-apk.yml)
+
+## Кратко
+
+Vivo NFC Lab проверяет, как vivo X300 CN видит MIFARE Ultralight EV1 MF0UL21, сравнивает прочитанные страницы с локальным дампом и показывает безопасный диагностический отчёт. Поддерживается загрузка собственного raw-дампа Chameleon Ultra на 164 байта, page-oriented `.eml`/`.hex` и Flipper Zero `.nfc`.
+
+Работа продолжается. Сейчас приоритет — проверка форматов MF0UL21, совместимости чтения на OriginOS 7 и поведения vivo Wallet на реальном устройстве.
+
 > **Статус:** исходный проект, **не рабочая эмуляция** VIZIT. Стандартный Android HCE не эмулирует ISO 14443-3 Type 2 (MIFARE Ultralight). Для чтения Type 2 без root доступен публичный NFC reader API, но это **не даёт возможности отвечать считывателю в режиме карты**.
 
 ## Новое в v0.3: Shizuku без root
